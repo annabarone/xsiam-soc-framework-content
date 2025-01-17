@@ -41,6 +41,30 @@
             "version": "latest"
         },
         {
+            "id": "FeedTorExitAddresses",
+            "version": "latest"
+        },
+        {
+            "id": "FeedAzure",
+            "version": "latest"
+        },
+        {
+            "id": "Feedsslabusech",
+            "version": "latest"
+        },
+        {
+            "id": "FeedDShield",
+            "version": "latest"
+        },
+        {
+            "id": "FeedJSON",
+            "version": "latest"
+        },
+        {
+            "id": "FreeFeeds",
+            "version": "latest"
+        },
+        {
             "id": "ZscalerZPA",
             "version": "1.0.7"
         },
