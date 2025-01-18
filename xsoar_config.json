@@ -5,6 +5,10 @@
             "version": "latest"
         },
         {
+            "id": "ContentManagement",
+            "version": "latest"
+        },
+        {
             "id": "FiltersAndTransformers",
             "version": "latest"
         },
@@ -536,10 +540,7 @@
             "id": "FeedMitreAttackv2",
             "version": "1.2.0"
         },
-        {
-            "id": "ContentManagement",
-            "version": "1.2.27"
-        },
+
         {
             "id": "AzureDevOps",
             "version": "1.4.6"
