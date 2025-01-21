@@ -544,5 +544,11 @@
             "id": "AWS-S3",
             "version": "1.2.29"
         }
+    ],
+    "custom_packs": [
+        {
+            "id": "SOC_Framework",
+            "packurl": "https://github.com/scottbrumley/xsiam-soc-framework/archive/refs/tags/V1.3.7.tar.gz",
+        }
     ]
 }
