@@ -1,7 +1,4 @@
-Content CI/CD Template
+# XSIAM SOC Framework Content
 
-This repository demonstrates how to create your own repository in which to 
-create your content and configure your CI/CD process.
-
-Follow [XSOAR CI/CD](https://xsoar.pan.dev/docs/reference/packs/content-management) Article
-
+This repository contains the content definitions used in the XSIAM Starter Configuration Setup playbook to 
+configure a Cortex XSIAM tenant for the Palo SOC Framework.
