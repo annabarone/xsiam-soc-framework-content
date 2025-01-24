@@ -1,8 +1,0 @@
-{
-    "custom_packs": [
-        {
-            "id": "SOC_Framework.tar.gz",
-            "url": "https://github.com/scottbrumley/xsiam-soc-framework/archive/refs/tags/V1.3.7.tar.gz"
-        }
-    ]
-}
