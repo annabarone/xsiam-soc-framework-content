@@ -1,66 +1,6 @@
 {
     "marketplace_packs": [
         {
-            "id": "Base",
-            "version": "latest"
-        },
-        {
-            "id": "FiltersAndTransformers",
-            "version": "latest"
-        },
-        {
-            "id": "CommonScripts",
-            "version": "latest"
-        },
-        {
-            "id": "CommonPlaybooks",
-            "version": "latest"
-        },
-        {
-            "id": "CommonTypes",
-            "version": "latest"
-        },
-        {
-            "id": "CoreAlertFields",
-            "version": "latest"
-        },
-        {
-            "id": "DemistoRESTAPI",
-            "version": "latest"
-        },
-        {
-            "id": "Phishing",
-            "version": "latest"
-        },
-        {
-            "id": "ProofpointTAP",
-            "version": "latest"
-        },
-        {
-            "id": "FeedPublicDNS",
-            "version": "latest"
-        },
-        {
-            "id": "FeedTorExitAddresses",
-            "version": "latest"
-        },
-        {
-            "id": "FeedAzure",
-            "version": "latest"
-        },
-        {
-            "id": "Feedsslabusech",
-            "version": "latest"
-        },
-        {
-            "id": "FeedDShield",
-            "version": "latest"
-        },
-        {
-            "id": "FeedJSON",
-            "version": "latest"
-        },
-        {
             "id": "ZscalerZPA",
             "version": "1.0.7"
         },
