@@ -824,5 +824,71 @@
             ],
             "passwordProtected": false
         }
-    ]
+    ],
+    "correlation_rules": [
+        {
+            "name": "Production Proofpoint TAP - Messages Blocked or Clicks Blocked",
+            "severity": "SEV_020_LOW",
+            "xql_query": "dataset = proofpoint_tap_v2_generic_alert_raw\n| filter _alert_data != null and (type = \"messages blocked\" or type = \"clicks blocked\")\n| alter alert_severity = json_extract_scalar(_alert_data, \"$.severity\")\n| alter alert_category = json_extract_scalar(_alert_data, \"$.alert_category\")\n| alter alert_name = json_extract_scalar(_alert_data, \"$.alert_name\")\n| alter alert_description = json_extract_scalar(_alert_data, \"$.alert_description\")",
+            "is_enabled": true,
+            "description": "Messages Blocked and Clicks Blocked for added context in incidents",
+            "alert_name": "$alert_name",
+            "alert_category": "User Defined",
+            "alert_type": null,
+            "alert_description": "$alert_description",
+            "alert_domain": "DOMAIN_SECURITY",
+            "alert_fields": {},
+            "execution_mode": "REAL_TIME",
+            "search_window": null,
+            "simple_schedule": null,
+            "timezone": null,
+            "crontab": null,
+            "suppression_enabled": true,
+            "suppression_duration": "6 hours",
+            "suppression_fields": [
+              "message_id"
+            ],
+            "dataset": "alerts",
+            "user_defined_severity": null,
+            "user_defined_category": "alert_category",
+            "mitre_defs": {},
+            "investigation_query_link": "",
+            "drilldown_query_timeframe": "ALERT",
+            "mapping_strategy": "AUTO",
+            "action": "ALERTS",
+            "lookup_mapping": []
+        },
+        {
+            "name": "Production Proofpoint TAP - Messages Delivered",
+            "severity": "User Defined",
+            "xql_query": "dataset = proofpoint_tap_v2_generic_alert_raw\n| filter type = \"messaged delivered\"\n| alter alert_severity = json_extract_scalar(_alert_data, \"$.severity\")\n| alter alert_category = json_extract_scalar(_alert_data, \"$.alert_category\")\n| alter alert_name = json_extract_scalar(_alert_data, \"$.alert_name\")\n| alter alert_description = json_extract_scalar(_alert_data, \"$.alert_description\")",
+            "is_enabled": true,
+            "description": "Messages Delivered",
+            "alert_name": "$alert_name",
+            "alert_category": "User Defined",
+            "alert_type": null,
+            "alert_description": "$alert_description",
+            "alert_domain": "DOMAIN_SECURITY",
+            "alert_fields": {},
+            "execution_mode": "REAL_TIME",
+            "search_window": null,
+            "simple_schedule": null,
+            "timezone": null,
+            "crontab": null,
+            "suppression_enabled": true,
+            "suppression_duration": "6 hours",
+            "suppression_fields": [
+              "message_id"
+            ],
+            "dataset": "alerts",
+            "user_defined_severity": "alert_severity",
+            "user_defined_category": "alert_category",
+            "mitre_defs": {},
+            "investigation_query_link": "",
+            "drilldown_query_timeframe": "ALERT",
+            "mapping_strategy": "AUTO",
+            "action": "ALERTS",
+            "lookup_mapping": []
+        }
+]
 }
