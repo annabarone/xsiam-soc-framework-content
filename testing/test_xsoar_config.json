@@ -1,6 +1,100 @@
 {
-    "marketplace_packs": [],
-    "custom_packs": [],
+    "marketplace_packs": [
+        {
+            "id": "Base",
+            "version": "latest"
+        },
+        {
+            "id": "FiltersAndTransformers",
+            "version": "latest"
+        },
+        {
+            "id": "CommonScripts",
+            "version": "latest"
+        },
+        {
+            "id": "CommonPlaybooks",
+            "version": "latest"
+        },
+        {
+            "id": "CommonTypes",
+            "version": "latest"
+        },
+        {
+            "id": "CoreAlertFields",
+            "version": "latest"
+        },
+        {
+            "id": "DemistoRESTAPI",
+            "version": "latest"
+        },
+        {
+            "id": "Phishing",
+            "version": "latest"
+        },
+        {
+            "id": "ProofpointTAP",
+            "version": "latest"
+        },
+        {
+            "id": "FeedPublicDNS",
+            "version": "latest"
+        },
+        {
+            "id": "FeedTorExitAddresses",
+            "version": "latest"
+        },
+        {
+            "id": "FeedAzure",
+            "version": "latest"
+        },
+        {
+            "id": "Feedsslabusech",
+            "version": "latest"
+        },
+        {
+            "id": "FeedDShield",
+            "version": "latest"
+        },
+        {
+            "id": "FeedJSON",
+            "version": "latest"
+        },
+        {
+            "id": "ZscalerZPA",
+            "version": "1.0.7"
+        },
+        {
+            "id": "XSIAMCompliance_HIPAA",
+            "version": "2.0.0"
+        },
+        {
+            "id": "XSIAMCompliance_NIST_800_53",
+            "version": "2.0.0"
+        },
+        {
+            "id": "XSIAMCompliance_PCI_DSS",
+            "version": "2.0.0"
+        },
+        {
+            "id": "NIST",
+            "version": "1.0.10"
+        },
+        {
+            "id": "SANS",
+            "version": "1.1.6"
+        },
+        {
+            "id": "BruteForce",
+            "version": "1.2.6"
+        }
+    ],
+    "custom_packs": [
+        {
+            "id": "SOC_Framework.tar.gz",
+            "url": "https://github.com/scottbrumley/xsiam-soc-framework/archive/refs/tags/V1.3.7.tar.gz"
+        }
+    ],
     "lookup_datasets": [
         {
             "dataset_name": "value_tags_repo",
@@ -890,5 +984,5 @@
             "action": "ALERTS",
             "lookup_mapping": []
         }
-]
+    ]
 }
