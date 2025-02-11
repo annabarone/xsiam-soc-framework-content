@@ -27,7 +27,7 @@
     ],
     "custom_packs": [
         {
-            "id": "SOC_Framework.zip",
+            "id": "SOC_Framework.tar.gz",
             "url": "https://github.com/annabarone/xsiam-soc-framework-content/raw/refs/heads/master/testing/uploadable_packs/SOC_Framework.tar.gz"
         }
     ]
