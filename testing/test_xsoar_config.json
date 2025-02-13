@@ -1,34 +1,9 @@
 {
-    "marketplace_packs": [
-        {
-            "id": "Base",
-            "version": "latest"
-        },
-        {
-            "id": "Phishing",
-            "version": "latest"
-        },
-        {
-            "id": "ProofpointTAP",
-            "version": "latest"
-        },
-        {
-            "id": "FeedPublicDNS",
-            "version": "latest"
-        },
-        {
-            "id": "FeedTorExitAddresses",
-            "version": "latest"
-        },
-        {
-            "id": "FeedAzure",
-            "version": "latest"
-        }
-    ],
+    "marketplace_packs": [],
     "custom_packs": [
         {
             "id": "SOC_Framework.tar.gz",
-            "url": "https://github.com/annabarone/xsiam-soc-framework-content/raw/refs/heads/master/testing/uploadable_packs/SOC_Framework.tar.gz"
+            "url": "https://github.com/scottbrumley/xsiam-soc-framework/archive/refs/tags/V1.3.7.tar.gz"
         }
     ]
 }
