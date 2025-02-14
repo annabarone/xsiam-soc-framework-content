@@ -5,27 +5,20 @@
             "version": "latest"
         },
         {
-            "id": "Phishing",
+            "id": "DemistoRESTAPI",
             "version": "latest"
         },
         {
             "id": "ProofpointTAP",
             "version": "latest"
-        },
-        {
-            "id": "FeedPublicDNS",
-            "version": "latest"
-        },
-        {
-            "id": "FeedTorExitAddresses",
-            "version": "latest"
-        },
-        {
-            "id": "FeedAzure",
-            "version": "latest"
         }
     ],
     "custom_packs": [
+        {
+            "id": "SOC_Framework.zip",
+            "url": "https://github.com/annabarone/xsiam-soc-framework-content/raw/refs/heads/master/testing/uploadable_packs/SOC_Framework.zip",
+            "system": "yes"
+        },
         {
             "id": "SOC_Framework.tar.gz",
             "url": "https://github.com/scottbrumley/xsiam-soc-framework/archive/refs/tags/V1.3.7.tar.gz"
@@ -33,7 +26,7 @@
     ],
     "lookup_datasets": [
         {
-            "dataset_name": "value_tags_repo",
+            "dataset_name": "value_tags",
             "dataset_type": "lookup",
             "dataset_schema": {
                 "Tag": "text",
@@ -50,596 +43,6 @@
                 "_collector_type": "text"
             },
             "url": "https://raw.githubusercontent.com/scottbrumley/xsiam-soc-framework/refs/heads/main/SOC_Framework/Lookup/value_tags.json"
-        },
-        {
-            "dataset_name": "value_tags_data",
-            "dataset_type": "lookup",
-            "dataset_schema": {
-                "Tag": "text",
-                "Time": "text",
-                "Vendor": "text",
-                "Product": "text",
-                "Category": "text",
-                "ScriptID": "text",
-                "TaskName": "text",
-                "PlaybookID": "text",
-                "_insert_time": "number",
-                "_update_time": "number",
-                "_collector_name": "text",
-                "_collector_type": "text"
-            },
-            "data": [
-                {
-                    "Category": "case_management",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "|setAlert",
-                    "Tag": "set_alert",
-                    "TaskName": null,
-                    "Time": null,
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "http",
-                    "Tag": "web_enrichment",
-                    "TaskName": null,
-                    "Time": "",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "GetIndicatorDBotScore",
-                    "Tag": "indicator_scoring",
-                    "TaskName": null,
-                    "Time": "",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "case_management",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "Set",
-                    "Tag": "set_context",
-                    "TaskName": "Set",
-                    "Time": "",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "case_management",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "|closeInvestigation",
-                    "Tag": "close_investigation",
-                    "TaskName": "",
-                    "Time": "",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "case_management",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "|send-mail",
-                    "Tag": "send_mail",
-                    "TaskName": null,
-                    "Time": "",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "triage",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "low_fidelity_alert_triage",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": null
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "identity_enrichment",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": null
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "email_enrichment",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": null
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "Platform",
-                    "ScriptID": "|armis-search-devices",
-                    "Tag": "armis_search_devices",
-                    "TaskName": null,
-                    "Time": "2",
-                    "Vendor": "Armis"
-                },
-                {
-                    "Category": "case_management",
-                    "PlaybookID": null,
-                    "Product": "Messenger",
-                    "ScriptID": "|send-notification",
-                    "Tag": "slack_notify",
-                    "TaskName": null,
-                    "Time": "2",
-                    "Vendor": "Slack"
-                },
-                {
-                    "Category": "Custom",
-                    "PlaybookID": null,
-                    "Product": "Custom Script",
-                    "ScriptID": "Custom",
-                    "Tag": "custom_script",
-                    "TaskName": null,
-                    "Time": "2",
-                    "Vendor": "Customer"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "Active Directory",
-                    "ScriptID": "|ad-get-user",
-                    "Tag": "ad_get_user",
-                    "TaskName": null,
-                    "Time": "2",
-                    "Vendor": "Microsoft"
-                },
-                {
-                    "Category": "escalation",
-                    "PlaybookID": null,
-                    "Product": "Incident Management",
-                    "ScriptID": "|PagerDuty-submit-event",
-                    "Tag": "pagerduty_event",
-                    "TaskName": null,
-                    "Time": "2",
-                    "Vendor": "Pager Duty"
-                },
-                {
-                    "Category": "assessment",
-                    "PlaybookID": null,
-                    "Product": "Falcon",
-                    "ScriptID": "|cs-falcon-device-count-ioc",
-                    "Tag": "hash_search",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": "CrowdStrike"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "Falcon",
-                    "ScriptID": "|cs-falcon-rtr-list-network-stats",
-                    "Tag": "forensic_enrichment",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": "CrowdStrike"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "Falcon",
-                    "ScriptID": "|cs-falcon-search-device",
-                    "Tag": "host_enrichment",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": "CrowdStrike"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "Intelligence",
-                    "ScriptID": "|recordedfuture-intelligence",
-                    "Tag": "recordedfuture_enrichment",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": "Recorded Future"
-                },
-                {
-                    "Category": "triage",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "DBotFindSimilarAlerts",
-                    "Tag": "dedup_alert",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "triage",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "",
-                    "Tag": "upon_trigger",
-                    "TaskName": "Foundation - Upon Trigger",
-                    "Time": "2",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "|ip",
-                    "Tag": "ip_enrichment",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "|mitre-get-indicator-name",
-                    "Tag": "mitre_enrichment",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "|attack-pattern",
-                    "Tag": "mitre_enrichment",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "GetIndicatorDBotScoreFromCache",
-                    "Tag": "dbot_enrichment",
-                    "TaskName": null,
-                    "Time": "2",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "|extractIndicators",
-                    "Tag": "dbot_enrichment",
-                    "TaskName": null,
-                    "Time": "2",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "TAP",
-                    "ScriptID": "|proofpoint-get-forensics",
-                    "Tag": "proofpoint_forensics",
-                    "TaskName": null,
-                    "Time": "5",
-                    "Vendor": "Proofpoint"
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": "XSIAM",
-                    "ScriptID": "|rasterize",
-                    "Tag": "web_enrichment",
-                    "TaskName": null,
-                    "Time": "5",
-                    "Vendor": "Palo Alto Networks"
-                },
-                {
-                    "Category": "remediation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "reset_password",
-                    "TaskName": "",
-                    "Time": "10",
-                    "Vendor": null
-                },
-                {
-                    "Category": "remediation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "reset_session_sso",
-                    "TaskName": "",
-                    "Time": "10",
-                    "Vendor": null
-                },
-                {
-                    "Category": "remediation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "isolate_network",
-                    "TaskName": "",
-                    "Time": "10",
-                    "Vendor": null
-                },
-                {
-                    "Category": "remediation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "pull_malicious_email",
-                    "TaskName": "",
-                    "Time": "10",
-                    "Vendor": null
-                },
-                {
-                    "Category": "remediation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "block_malcious_domain",
-                    "TaskName": "",
-                    "Time": "10",
-                    "Vendor": null
-                },
-                {
-                    "Category": "remediation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "isolate_endpoint",
-                    "TaskName": "",
-                    "Time": "10",
-                    "Vendor": null
-                },
-                {
-                    "Category": "remediation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "revoke_credentials",
-                    "TaskName": "",
-                    "Time": "10",
-                    "Vendor": null
-                },
-                {
-                    "Category": "remediation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "remove_malware",
-                    "TaskName": "",
-                    "Time": "10",
-                    "Vendor": null
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "ask_user_email",
-                    "TaskName": "",
-                    "Time": "20",
-                    "Vendor": null
-                },
-                {
-                    "Category": "escalation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "escalate_snow_patch",
-                    "TaskName": "",
-                    "Time": "20",
-                    "Vendor": null
-                },
-                {
-                    "Category": "escalation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "escalate_snow_reimage",
-                    "TaskName": "",
-                    "Time": "20",
-                    "Vendor": null
-                },
-                {
-                    "Category": "escalation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "escalate_snow_vuln",
-                    "TaskName": "",
-                    "Time": "20",
-                    "Vendor": null
-                },
-                {
-                    "Category": "escalation",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "escalate_snow_restore_system",
-                    "TaskName": "",
-                    "Time": "20",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "xpanse_rdp_server",
-                    "TaskName": "",
-                    "Time": "3600",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "malware_detection",
-                    "TaskName": "",
-                    "Time": "3600",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "sso_excessive_failures",
-                    "TaskName": "",
-                    "Time": "3600",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "data_exfiltration",
-                    "TaskName": "",
-                    "Time": "3600",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "lateral_movement_hunt",
-                    "TaskName": "CrowdStrike Falcon - Search Endpoints By Hash",
-                    "Time": "3600",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": null,
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "privilege_escalation",
-                    "TaskName": "",
-                    "Time": "3600",
-                    "Vendor": null
-                },
-                {
-                    "Category": "enrichment",
-                    "PlaybookID": "",
-                    "Product": "Falcon",
-                    "ScriptID": "|cs-falcon-rtr-list-processes",
-                    "Tag": "forensic_enrichment",
-                    "TaskName": "",
-                    "Time": "2",
-                    "Vendor": "CrowdStrike"
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "141c1bb9-f832-480c-842c-5f51d16c97c1",
-                    "Product": null,
-                    "ScriptID": null,
-                    "Tag": "MFA_alerts",
-                    "TaskName": "Multi Factor Alerts",
-                    "Time": "60",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "19afce31-d945-4a44-800d-efd460f0c9f1",
-                    "Product": null,
-                    "ScriptID": null,
-                    "Tag": "ngfw_prevented",
-                    "TaskName": "Use Case - NGFW Prevented",
-                    "Time": "1",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "20fb8df8-0bff-41a7-813f-0353e556276f",
-                    "Product": null,
-                    "ScriptID": null,
-                    "Tag": "malware_analytics",
-                    "TaskName": "Use Case - Crowdstrike Analytics",
-                    "Time": "20",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "24e24f21-de4a-47a6-8ae5-faa2e135b976",
-                    "Product": null,
-                    "ScriptID": null,
-                    "Tag": "Generic_Tasks",
-                    "TaskName": null,
-                    "Time": "60",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "27719b9f-70cc-4991-81c6-24ba34e4e231",
-                    "Product": null,
-                    "ScriptID": null,
-                    "Tag": "Alert_Source_XDR_Analytics",
-                    "TaskName": "XDR Analytics Alerts",
-                    "Time": "60",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "6390e6e0-7a4b-4473-823f-aba4fea74d40",
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "malware_detection",
-                    "TaskName": "Use Case - Malware Investigation \u0026 Response Incident Handler",
-                    "Time": "3600",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "92825389-c225-4f25-81a9-5d973634aca5",
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "phishing_message_delivered",
-                    "TaskName": "Use Case - Phishing Malicious Message Delivered",
-                    "Time": "10",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "a990fd0d-ef61-4b7f-8624-445c540db9ae",
-                    "Product": null,
-                    "ScriptID": null,
-                    "Tag": "Alert_Source_PAN_NGFW",
-                    "TaskName": "NGFW Alerts",
-                    "Time": "60",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "ba7aa520-0767-4b3c-87ed-79e32b5ad5dd",
-                    "Product": null,
-                    "ScriptID": "",
-                    "Tag": "phishing_click_permitted",
-                    "TaskName": "",
-                    "Time": "60",
-                    "Vendor": null
-                },
-                {
-                    "Category": "use_case",
-                    "PlaybookID": "d227107c-3391-409c-86dd-529ed9952ade",
-                    "Product": null,
-                    "ScriptID": null,
-                    "Tag": "Access_to_Cardholder_Data",
-                    "TaskName": "Cardholder Data Access",
-                    "Time": "60",
-                    "Vendor": null
-                }
-            ]
         }
     ],
     "jobs":[
@@ -722,14 +125,14 @@
     ],
     "integration_instances": [
         {
-            "version": 22,
+            "version": 1,
             "propagationLabels": [
                 "all"
             ],
             "isOverridable": false,
             "enabled": "true",
-            "name": "POV XSIAM Content Management Instance",
-            "brand": "POV XSIAM Content Management",
+            "name": "PlaybookMetrics",
+            "brand": "System XQL HTTP Collector",
             "category": "Utilities",
             "engine": "",
             "engineGroup": "",
@@ -771,9 +174,195 @@
             },
             "data": [
                 {
+                    "display": "Product Name",
+                    "displayPassword": "",
+                    "name": "product",
+                    "defaultValue": "PlaybookMetrics",
+                    "type": 0,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": null,
+                    "info": "The name of the 'Product' to include in the event data",
+                    "hasvalue": true,
+                    "value": "PlaybookMetrics"
+                },
+                {
+                    "display": "vendor name",
+                    "displayPassword": "",
+                    "name": "vendor",
+                    "defaultValue": "XSIAM",
+                    "type": 0,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": null,
+                    "info": "The name of the 'Vendor' to include in the event data",
+                    "hasvalue": true,
+                    "value": "XSIAM"
+                }
+            ],
+            "passwordProtected": false
+        },
+        {
+            "version": 11,
+            "propagationLabels": [
+                "all"
+            ],
+            "isOverridable": false,
+            "enabled": "false",
+            "name": "Proofpoint TAP v2_instance_1",
+            "brand": "Proofpoint TAP v2",
+            "category": "Email",
+            "engine": "",
+            "engineGroup": "",
+            "isIntegrationScript": true,
+            "mappingId": "Proofpoint TAP Classifier",
+            "outgoingMapperId": "",
+            "incomingMapperId": "05e0aeaf-57ca-40f1-8090-1b01e0f80549",
+            "canSample": true,
+            "defaultIgnore": false,
+            "integrationLogLevel": "",
+            "configuration": {
+                "id": "",
+                "version": 0,
+                "cacheVersn": 0,
+                "modified": "0001-01-01T00:00:00Z",
+                "sizeInBytes": 0,
+                "packID": "",
+                "packName": "",
+                "itemVersion": "",
+                "fromServerVersion": "",
+                "toServerVersion": "",
+                "definitionId": "",
+                "isOverridable": false,
+                "vcShouldIgnore": false,
+                "vcShouldKeepItemLegacyProdMachine": false,
+                "commitMessage": "",
+                "shouldCommit": false,
+                "name": "",
+                "prevName": "",
+                "display": "",
+                "brand": "",
+                "category": "",
+                "icon": "",
+                "description": "",
+                "configuration": null,
+                "integrationScript": null,
+                "hidden": false,
+                "canGetSamples": false
+            },
+            "data": [
+                {
+                    "section": "Collect",
+                    "advanced": true,
+                    "display": "Events to fetch",
+                    "displayPassword": "",
+                    "name": "events_type",
+                    "defaultValue": "All",
+                    "type": 15,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": [
+                        "All",
+                        "Issues",
+                        "Blocked Clicks",
+                        "Permitted Clicks",
+                        "Blocked Messages",
+                        "Delivered Messages"
+                    ],
+                    "info": "",
+                    "hasvalue": true,
+                    "value": "All"
+                },
+                {
+                    "section": "Collect",
+                    "advanced": true,
+                    "display": "Maximum number of incident per fetch",
+                    "displayPassword": "",
+                    "name": "limit",
+                    "defaultValue": "50",
+                    "type": 0,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": null,
+                    "info": "",
+                    "hasvalue": true,
+                    "value": "200"
+                },
+                {
                     "section": "Connect",
-                    "display": "API Key ID",
-                    "displayPassword": "API Key",
+                    "display": "Server URL",
+                    "displayPassword": "",
+                    "name": "url",
+                    "defaultValue": "https://tap-api-v2.proofpoint.com",
+                    "type": 0,
+                    "required": true,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": null,
+                    "info": "e.g., https://tap-api-v2.proofpoint.com",
+                    "hasvalue": true,
+                    "value": "https://tap-api-v2.proofpoint.com"
+                },
+                {
+                    "section": "Collect",
+                    "display": "Advanced: Raw message encoding",
+                    "displayPassword": "",
+                    "name": "raw_json_encoding",
+                    "defaultValue": "",
+                    "type": 0,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": null,
+                    "info": "The character encoding to apply on the message fetched (e.g. latin-1). Advanced configuration to be used only if instructed by XSOAR Support",
+                    "hasvalue": false,
+                    "value": null
+                },
+                {
+                    "section": "Collect",
+                    "display": "Fetch incidents",
+                    "displayPassword": "",
+                    "name": "isFetch",
+                    "defaultValue": "",
+                    "type": 8,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": null,
+                    "info": "",
+                    "hasvalue": true,
+                    "value": true
+                },
+                {
+                    "display": "Alerts Fetch Interval",
+                    "displayPassword": "",
+                    "name": "alertFetchInterval",
+                    "defaultValue": "1",
+                    "type": 19,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": null,
+                    "info": "",
+                    "hasvalue": true,
+                    "value": "1"
+                },
+                {
+                    "section": "Connect",
+                    "display": "Service Principal",
+                    "displayPassword": "",
                     "name": "credentials",
                     "defaultValue": "",
                     "type": 9,
@@ -782,10 +371,10 @@
                     "hiddenUsername": false,
                     "hiddenPassword": false,
                     "options": null,
-                    "info": "",
+                    "info": "The password refers to secret",
                     "hasvalue": true,
                     "value": {
-                        "credential": "Standard XSIAM API Key",
+                        "credential": "",
                         "credentials": {
                             "cacheVersn": 0,
                             "id": "",
@@ -798,8 +387,51 @@
                             "version": 0,
                             "workgroup": ""
                         },
+                        "identifier": "test_REPLACE",
                         "passwordChanged": false
                     }
+                },
+                {
+                    "section": "Collect",
+                    "advanced": true,
+                    "display": "Threat type",
+                    "displayPassword": "",
+                    "name": "threat_type",
+                    "defaultValue": "",
+                    "type": 16,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": [
+                        "url",
+                        "attachment",
+                        "messageText"
+                    ],
+                    "info": "A string specifying which threat type to return. If empty, all threat types are returned. Can be \"url\", \"attachment\", or \"messageText\".",
+                    "hasvalue": true,
+                    "value": []
+                },
+                {
+                    "section": "Collect",
+                    "advanced": true,
+                    "display": "Threat status",
+                    "displayPassword": "",
+                    "name": "threat_status",
+                    "defaultValue": "",
+                    "type": 16,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": [
+                        "active",
+                        "cleared",
+                        "falsePositive"
+                    ],
+                    "info": "A string specifying which threat statuses to return. If empty, will return \"active\" and \"cleared\" threats. Can be \"active\", \"cleared\", or \"falsePositive\".",
+                    "hasvalue": true,
+                    "value": []
                 },
                 {
                     "section": "Connect",
@@ -819,6 +451,38 @@
                     "value": false
                 },
                 {
+                    "section": "Collect",
+                    "display": "First fetch time range",
+                    "displayPassword": "",
+                    "name": "fetch_time",
+                    "defaultValue": "1 hour",
+                    "type": 0,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": null,
+                    "info": "First fetch time range (<number> <time unit>, e.g., 1 hour, 30 minutes). Proofpoint supports a maximum 1 week fetch back.",
+                    "hasvalue": true,
+                    "value": "1 hour"
+                },
+                {
+                    "section": "Connect",
+                    "display": "Incident type",
+                    "displayPassword": "",
+                    "name": "incidentType",
+                    "defaultValue": "",
+                    "type": 13,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": null,
+                    "info": "",
+                    "hasvalue": false,
+                    "value": null
+                },
+                {
                     "section": "Connect",
                     "advanced": true,
                     "display": "Use system proxy settings",
@@ -836,20 +500,39 @@
                     "value": false
                 },
                 {
-                    "section": "Connect",
-                    "display": "Server URL (e.g., https://api.xsoar-example.com)",
+                    "display": "",
                     "displayPassword": "",
-                    "name": "url",
-                    "defaultValue": "https://api.xsoar-example.com",
+                    "name": "feed",
+                    "defaultValue": "",
                     "type": 0,
-                    "required": true,
+                    "required": false,
                     "hidden": false,
                     "hiddenUsername": false,
                     "hiddenPassword": false,
                     "options": null,
                     "info": "",
                     "hasvalue": true,
-                    "value": ""
+                    "value": false
+                },
+                {
+                    "section": "Connect",
+                    "advanced": true,
+                    "display": "API Version",
+                    "displayPassword": "",
+                    "name": "api_version",
+                    "defaultValue": "v2",
+                    "type": 15,
+                    "required": false,
+                    "hidden": false,
+                    "hiddenUsername": false,
+                    "hiddenPassword": false,
+                    "options": [
+                        "v1",
+                        "v2"
+                    ],
+                    "info": "v1 is deprecated for new instances. The current API version is v2.",
+                    "hasvalue": true,
+                    "value": "v2"
                 }
             ],
             "passwordProtected": false
