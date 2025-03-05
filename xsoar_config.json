@@ -117,13 +117,13 @@
                 "timePeriod": 1
             },
             "cronView": false,
-            "scheduled": true,
-            "tags": [],
+            "scheduled": false,
+            "tags": null,
             "shouldTriggerNew": true,
             "closePrevRun": false,
             "notifyOwner": false,
             "isFeed": false,
-            "selectedFeeds": [],
+            "selectedFeeds": null,
             "isAllFeeds": false
         }
     ],
