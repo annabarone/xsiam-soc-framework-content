@@ -1,8 +1,42 @@
 {
-    "custom_packs": [
+    "jobs": [
         {
-            "id": "SOC_Framework.tar.gz",
-            "url": "https://github.com/scottbrumley/xsiam-soc-framework/archive/refs/tags/V1.3.7.tar.gz"
+            "CustomFields": null,
+            "type": "##default##",
+            "name": "Auto Triage",
+            "severity": 0,
+            "labels": null,
+            "details": "This playbook accesses the API for XSIAM and by default must attract starred alerts within 6 hours or they will be closed as low fidelity alerts.",
+            "owner": "abarone@paloaltonetworks.com",
+            "playbookId": "9baee4e3-5735-4b58-8407-5c5ce6fbad91",
+            "phase": "",
+            "startDate": "2025-02-05T01:30:48.833Z",
+            "endingType": "never",
+            "times": 0,
+            "recurrent": true,
+            "endingDate": "2025-02-05T01:30:48.832Z",
+            "humanCron": {
+                "days": [
+                    "SUN",
+                    "MON",
+                    "TUE",
+                    "WED",
+                    "THU",
+                    "FRI",
+                    "SAT"
+                ],
+                "timePeriodType": "hours",
+                "timePeriod": 1
+            },
+            "cronView": false,
+            "scheduled": false,
+            "tags": null,
+            "shouldTriggerNew": true,
+            "closePrevRun": false,
+            "notifyOwner": false,
+            "isFeed": false,
+            "selectedFeeds": null,
+            "isAllFeeds": false
         }
     ]
 }
