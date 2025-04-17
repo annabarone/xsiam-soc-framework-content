@@ -131,6 +131,16 @@
         {
             "name": "Job_Utility_Bulk_Alert_Closer_ID_List",
             "value": "1\n2\n3\n4\n"
+        },
+        {
+            "name": "Assets_Type",
+            "value": "{\n    \"Admin_Jumpboxes\": [\n        {\n            \"Name\": \"corp-a\",\n            \"IP\": \"10.2.0.20\"\n        },\n        {\n            \"Name\": \"byos-dc-a\",\n            \"IP\": \"10.1.0.20\"\n        }\n    ],\n    \"Admin_Workstations\": [\n        {\n            \"Name\": \"corp-a\",\n            \"IP\": \"10.2.0.20\"\n        }\n    ],\n    \"Admin_Users\": [\n        {\n            \"Name\": \"BYOS\\\\lab-user\"\n        }\n    ],\n    \"Service_Accounts\": [\n        {\n            \"Name\": \"\"\n        }\n    ],\n    \"Management_Servers\": [\n        {\n            \"Name\": \"byos-dc-a\",\n            \"IP\": \"10.1.0.20\"\n        }\n    ]\n}",
+            "type": "json"
+        },
+        {
+            "name": "ProductionAssets",
+            "value": "{\n    \"Networks\": [\n        {\n            \"CIDR\": \"10.20.20.0/24\"\n        },\n        {\n            \"CIDR\": \"10.20.10.0/24\"\n        }\n    ]\n}",
+            "type": "json"
         }
     ],
     "integration_instances": [
