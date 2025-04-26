@@ -32,7 +32,7 @@
         {
             "dataset_name": "value_tags",
             "dataset_type": "lookup",
-            "url": "## FILL MANDATORY FIELD ## - YOU NEED TO UPDATE THIS WITH RAW GITHUB LOCATION OF JSON FILE",
+            "url": "https://raw.githubusercontent.com/annabarone/xsiam-soc-framework-content/refs/heads/feature/capture_pack/testing/Packs/SOCOptimization/LookupData/value_tags.json",
             "dataset_schema": {
                 "Product": "text",
                 "TaskName": "text",
@@ -718,6 +718,6 @@
             "isFeed": false,
             "selectedFeeds": null,
             "isAllFeeds": false
-        },
+        }
     ]
 }
