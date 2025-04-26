@@ -1,7 +1,7 @@
 {
     "custom_packs": [
         {
-            "id": "SOCOptimization.tar",
+            "id": "SOCOptimization.zip",
             "url": "https://github.com/annabarone/xsiam-soc-framework-content/raw/refs/heads/feature/capture_pack/testing/Packs/SOCOptimization.zip",
             "system": "yes"
         }
