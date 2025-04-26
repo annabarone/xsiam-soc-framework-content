@@ -1,0 +1,26 @@
+{
+    "name": "SOC Optimization",
+    "description": "Optimizes the SOC for the Palo SOC Framework",
+    "support": "developer",
+    "currentVersion": "1.0.0",
+    "author": "Scott Brumley",
+    "url": "",
+    "email": "abarone@paloaltonetworks.com",
+    "categories": [
+        "Utilities"
+    ],
+    "tags": [
+        "SOC",
+        "POV"
+    ],
+    "useCases": [],
+    "keywords": [],
+    "marketplaces": [
+        "xsoar",
+        "marketplacev2"
+    ],
+    "githubUser": [
+        "annabarone",
+        "scottbrumley"
+    ]
+}

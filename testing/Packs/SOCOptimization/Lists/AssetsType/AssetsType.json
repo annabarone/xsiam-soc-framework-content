@@ -1,0 +1,22 @@
+{
+    "cacheVersn": 0,
+    "data": "-",
+    "definitionId": "",
+    "description": "",
+    "detached": false,
+    "fromServerVersion": "",
+    "id": "Assets_Type",
+    "isOverridable": false,
+    "itemVersion": "",
+    "locked": false,
+    "name": "Assets_Type",
+    "nameLocked": false,
+    "packID": "",
+    "packName": "",
+    "system": false,
+    "tags": null,
+    "toServerVersion": "",
+    "truncated": false,
+    "type": "json",
+    "version": -1
+}

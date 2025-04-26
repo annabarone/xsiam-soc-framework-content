@@ -1,0 +1,41 @@
+action: ALERTS
+alert_category: User Defined
+alert_description: $alert_description
+alert_domain: DOMAIN_SECURITY
+alert_fields: {}
+alert_name: $alert_name
+alert_type: null
+crontab: null
+dataset: alerts
+description: Messages Blocked and Clicks Blocked for added context in incidents
+drilldown_query_timeframe: ALERT
+execution_mode: REAL_TIME
+global_rule_id: Production Proofpoint TAP - Messages Blocked or Clicks Blocked
+investigation_query_link: ''
+is_enabled: true
+lookup_mapping: null
+mapping_strategy: AUTO
+mitre_defs: {}
+name: Production Proofpoint TAP - Messages Blocked or Clicks Blocked
+rule_id: 230
+search_window: null
+severity: SEV_020_LOW
+simple_schedule: null
+suppression_duration: 6 hours
+suppression_enabled: true
+suppression_fields:
+- message_id
+timezone: null
+user_defined_category: alert_category
+user_defined_severity: null
+xql_query: 'dataset = proofpoint_tap_v2_generic_alert_raw
+
+  | filter _alert_data != null and (type = "messages blocked" or type = "clicks blocked")
+
+  | alter alert_severity = json_extract_scalar(_alert_data, "$.severity")
+
+  | alter alert_category = json_extract_scalar(_alert_data, "$.alert_category")
+
+  | alter alert_name = json_extract_scalar(_alert_data, "$.alert_name")
+
+  | alter alert_description = json_extract_scalar(_alert_data, "$.alert_description")'
